@@ -355,4 +355,7 @@
         <item>30</item>
         <item>15</item>
     </integer-array>
+
+    <!-- Whether the new Auto Selection Network UI should be shown -->
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 </resources>
