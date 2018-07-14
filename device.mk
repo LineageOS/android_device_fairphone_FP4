@@ -356,8 +356,7 @@ PRODUCT_PACKAGES += \
     libjson:64 \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl:64 \
-    libxml2
+    librmnetctl:64
 
 # Sensors
 PRODUCT_PACKAGES += \
