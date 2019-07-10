@@ -155,6 +155,9 @@ vendor.opengles.version=196610
 # Incremental FS
 ro.incremental.enable=yes
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 # Network manager
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
