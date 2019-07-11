@@ -40,6 +40,3 @@ telephony.lteOnCdmaDevice=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
-
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
