@@ -12,9 +12,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Include GSI keys
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
