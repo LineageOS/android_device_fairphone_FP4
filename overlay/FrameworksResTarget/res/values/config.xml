@@ -67,11 +67,17 @@
              eutran : eutranSupportedRelease
              nfc : contactlessSupportedRelease
              crl : rspCrlSupportedVersion
+             nrepc : nrEpcSupportedRelease
+             nr5gc : nr5gcSupportedRelease
+             eutran5gc : eutran5gcSupportedRelease
     -->
     <string-array name="config_telephonyEuiccDeviceCapabilities" translatable="false">
         <item>gsm,9</item>
         <item>utran,10</item>
         <item>eutran,15</item>
+        <item>nrepc,15</item>
+        <item>nr5gc,15</item>
+        <item>eutran5gc,15</item>
     </string-array>
 
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
