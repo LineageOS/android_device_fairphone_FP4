@@ -74,6 +74,10 @@
         <item>0:2:15</item>  <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+    <!-- List of comma separated package names for which we the system will not show crash, ANR,
+         etc. dialogs. -->
+    <string name="config_appsNotReportingCrashes" translatable="false">com.google.android.euicc</string>
+
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
