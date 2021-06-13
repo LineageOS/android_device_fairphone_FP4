@@ -71,8 +71,6 @@ on post-fs
     chmod 0666 /dev/cm4_ois0
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
     mount_all --late
 
 on post-fs-data
