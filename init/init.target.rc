@@ -108,6 +108,18 @@ on boot && property:persist.vendor.usb.controller.default=*
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
 
+on property:ro.vendor.qti.soc_id=434
+    setprop ro.soc.model SM6350
+
+on property:ro.vendor.qti.soc_id=459
+    setprop ro.soc.model SM6350
+
+on property:ro.vendor.qti.soc_id=400
+    setprop ro.soc.model SM7250
+
+on property:ro.vendor.qti.soc_id=440
+    setprop ro.soc.model SM7250
+
 on charger
     start vendor.power_off_alarm
     setprop vendor.usb.controller a600000.dwc3
