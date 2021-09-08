@@ -113,6 +113,12 @@
         <boolean name="show_operator_name_in_statusbar_bool" value="true" />
         <boolean name="show_iccid_in_sim_status_bool" value="true" />
         <int name="carrier_cfnr_timer_default_int" value="0" />
+
+        <!-- If this is true, the SIM card (through Customer Service Profile EF file) will be
+         able to prevent manual operator selection. If false, this SIM setting will be
+         ignored and manual operator selection will always be available. See
+         CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
+        <boolean name="csp_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
