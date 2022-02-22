@@ -1,0 +1,19 @@
+# Firmware from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP1X:user/release-keys
+
+abl_ecc.elf:abl.img;AB
+aop.mbn:aop.img;AB
+BTFM.bin:bluetooth.img;AB
+Core_NON-HLOS.bin:core_nhlos.img;AB
+devcfg.mbn:devcfg.img;AB
+dspso.bin:dsp.img;AB
+featenabler.mbn:featenabler.img;AB
+hyp.mbn:hyp.img;AB
+imagefv.elf:imagefv.img;AB
+km41.mbn:keymaster.img;AB
+NON-HLOS.bin:modem.img;AB
+multi_image.mbn:multiimgoem.img;AB
+qupv3fw.elf:qupfw.img;AB
+tz.mbn:tz.img;AB
+uefi_sec.mbn:uefisecapp.img;AB
+xbl.elf:xbl.img;AB
+xbl_config.elf:xbl_config.img;AB
