@@ -171,6 +171,7 @@ sys.vendor.shutdown.waittime=500
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
+vendor.usb.product_string=Fairphone 4 5G
 vendor.usb.qdss.inst.name=qdss
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
