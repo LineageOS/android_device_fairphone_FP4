@@ -301,8 +301,7 @@ PRODUCT_PACKAGES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor:64 \
-    netutils-wrapper-1.0
+    android.system.net.netd@1.1.vendor:64
 
 # Neural networks
 PRODUCT_PACKAGES += \
