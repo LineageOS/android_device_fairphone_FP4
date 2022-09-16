@@ -18,6 +18,10 @@
 <resources>
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">16px</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+
     <dimen name="rounded_corner_content_padding">44px</dimen>
 
     <!-- Location on the screen of the center of the physical power button. -->
