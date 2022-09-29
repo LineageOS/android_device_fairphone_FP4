@@ -16,6 +16,24 @@
       "message": "You forgot to remove the actual header.",
       "revId": "a9cd88605b7447349c3fe3fce5f293c4a742c2a6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55207af0_c227bd4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-09-29T09:48:12Z",
+      "side": 1,
+      "message": "$ git status\nHEAD detached from ec673de6\nChanges not staged for commit:\n  (use \"git add/rm \u003cfile\u003e...\" to update what will be committed)\n  (use \"git restore \u003cfile\u003e...\" to discard changes in working directory)\n\tdeleted:    bluetooth/include/bdroid_buildcfg.h",
+      "parentUuid": "f758b28d_4172a097",
+      "revId": "a9cd88605b7447349c3fe3fce5f293c4a742c2a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
