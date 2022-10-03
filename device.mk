@@ -116,7 +116,6 @@ PRODUCT_PACKAGES += \
 
 # Audio (Hardware)
 PRODUCT_PACKAGES += \
-    audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default
 
@@ -196,7 +195,6 @@ PRODUCT_PACKAGES += \
     gralloc.lito \
     memtrack.lito \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libsdmcore \
     libsdmutils \
