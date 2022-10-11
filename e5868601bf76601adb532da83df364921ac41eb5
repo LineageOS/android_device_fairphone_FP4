@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49cc1fee_e03fed85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2022-10-11T21:59:48Z",
+      "side": 1,
+      "message": "Doesn\u0027t work for upgrades.\n\n`[persist.vendor.qcom.bluetooth.scram.enabled]: [false]`",
+      "revId": "e5868601bf76601adb532da83df364921ac41eb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
