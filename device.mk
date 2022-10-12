@@ -195,7 +195,9 @@ PRODUCT_PACKAGES += \
     gralloc.lito \
     memtrack.lito \
     libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
     libqdMetaData \
+    libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     libtinyxml \
