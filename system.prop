@@ -1,9 +1,6 @@
 # Bluetooth
 persist.bluetooth.disableinbandringing=false
 
-# Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.fp.camera,foundation.e.camera
-
 # Display 
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
