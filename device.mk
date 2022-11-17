@@ -192,6 +192,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
     gralloc.lito \
+    init.qti.display_boot.sh \
     memtrack.lito \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
