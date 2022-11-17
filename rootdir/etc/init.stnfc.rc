@@ -1,3 +1,5 @@
+# This file needs to be executed by vendor_init at boot of the device,
+# both in normal and factory mode.
 on post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
     chmod 0660 /dev/st21nfc
