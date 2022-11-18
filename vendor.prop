@@ -170,6 +170,7 @@ persist.vendor.sensors.allow_non_default_discovery=true
 sys.vendor.shutdown.waittime=500
 
 # USB
+ro.recovery.usb.fastboot.pid=D00D
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.product_string=Fairphone 4 5G
