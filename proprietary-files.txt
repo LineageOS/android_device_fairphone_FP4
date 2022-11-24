@@ -325,7 +325,7 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
-framework/tcmclient.jar
+system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
@@ -395,8 +395,8 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Euicc
-app/T2mEuiccOverlay/T2mEuiccOverlay.apk
-priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+system/app/T2mEuiccOverlay/T2mEuiccOverlay.apk
+system/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Feature enabler client
 vendor/bin/feature_enabler_client
@@ -804,8 +804,8 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
 # QMI
-etc/permissions/privapp-permissions-qti.xml
-etc/sysconfig/qti_whitelist.xml
+system/etc/permissions/privapp-permissions-qti.xml
+system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/etc/init/qmipriod.rc
@@ -1168,7 +1168,7 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display
-framework/WfdCommon.jar
+system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
