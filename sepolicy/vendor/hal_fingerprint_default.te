@@ -2,3 +2,5 @@ allow hal_fingerprint_default fpsensor_fp_device:chr_file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 
 set_prop(hal_fingerprint_default, vendor_t2m_sys_prop)
+
+add_hwservice(hal_fingerprint_default, fp_ext_svc2_hwservice)

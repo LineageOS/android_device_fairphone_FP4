@@ -209,6 +209,16 @@
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.fpsensor.hardware.fpsensorhidlsvc</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IFpsensorHidlSvc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IFpsensorHidlSvc/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.2</version>
