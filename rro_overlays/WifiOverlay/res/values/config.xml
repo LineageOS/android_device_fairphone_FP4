@@ -58,6 +58,12 @@
          range string like '1-6,11'. -->
     <string  translatable="false" name="config_wifiSoftap2gChannelList"></string>
 
+    <!-- Enable Aware NDP interface selection on interface that already has network set up.
+     Note: the default AOSP Android does not support multiple networks on the same Aware NDI.
+     Enabling this configuration will restore legacy behavior but may result in incorrect behavior.
+     -->
+    <bool name="config_wifiAllowMultipleNetworksOnSameAwareNdi">true</bool>
+
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Fairphone 4 5G</string>
 </resources>
