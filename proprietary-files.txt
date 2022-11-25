@@ -103,7 +103,7 @@ vendor/lib64/camera/com.qti.tuned.sunny_imx576_fp4.bin
 vendor/lib64/camera/com.qti.tuned.tsp_imx582.bin
 vendor/lib64/camera/com.qti.tuned.tsp_imx582_sma.bin
 vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.bitra.so|9187f8ff3db2ea982d2a26982df74a4eedb9d308|4f55fc196795885bbaf82e2168104974c051b2ed
+vendor/lib64/hw/com.qti.chi.override.bitra.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.feature2.anchorsync.bitra.so
 vendor/lib64/com.qti.feature2.demux.bitra.so
