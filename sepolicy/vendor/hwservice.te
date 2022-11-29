@@ -1,3 +1,1 @@
 type fp_ext_svc2_hwservice, hwservice_manager_type;
-type hal_display_hwservice, hwservice_manager_type;
-type hal_display_iris_hwservice, hwservice_manager_type;
