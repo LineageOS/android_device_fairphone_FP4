@@ -297,9 +297,6 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
 
-# Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-
 # Display (SDM)
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/lib64/libdisplayqos.so
@@ -311,9 +308,6 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
-
-# Display (OSS)
-vendor/lib64/libsdmcore.so
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -523,36 +517,6 @@ vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
-
-# Iris
-vendor/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
-vendor/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
-vendor/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
-vendor/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
-vendor/lib64/libpwirisIoctlWrapper.so
-vendor/lib64/libpwirisPCS.so
-vendor/lib64/libpwiriscalibrate.so
-vendor/lib64/libpwirisfeature.so
-vendor/lib64/libpwirishalwrapper.so
-vendor/lib64/libpwirismcfcheck.so
-vendor/lib64/libpwirispq.so
-vendor/lib64/libpwirisservice.so
-vendor/lib64/libpwirissoft.so
-vendor/lib64/libpwsnapdragoncolor.so
-vendor/lib64/libpwsoftirisPCS.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
-vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
-
-# Iris Firmware
-vendor/etc/display/iris6_ccf1b.fw:vendor/firmware/iris6_ccf1b.fw
-vendor/etc/display/iris6_ccf2b.fw:vendor/firmware/iris6_ccf2b.fw
-vendor/etc/display/iris6_ccf3b.fw:vendor/firmware/iris6_ccf3b.fw
-vendor/etc/irissoft.fw
-vendor/firmware/iris6.fw
-vendor/firmware/iris6_ccf1.fw
-vendor/firmware/iris6_ccf2.fw
-vendor/firmware/iris6_ccf3.fw
 
 # IMS
 system_ext/lib64/lib-imsvideocodec.so
