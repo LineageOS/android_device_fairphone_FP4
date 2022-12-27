@@ -412,7 +412,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/graphics/fb*     hdmi_audio_cb            0600    audioserver audio
 
 /sys/class/graphics/fb*     lineptr_value            0664    system  graphics
-/sys/class/drm/sde-crtc-*   lineptr_value            0664    system  graphics
 /sys/class/graphics/fb*     msm_fb_persist_mode      0664    system  graphics
 
 /sys/class/graphics/fb0     idle_time                0664    system  graphics
@@ -421,6 +420,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/graphics/fb0     modes                    0664    system  graphics
 /sys/class/graphics/fb0     mode                     0664    system  graphics
 /sys/class/graphics/fb0     msm_cmd_autorefresh_en   0664    system  graphics
+
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card*/sde-crtc-* lineptr_value 0664 system graphics
 
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp power/control 0664 system graphics
 
