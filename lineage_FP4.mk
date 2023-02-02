@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -27,10 +27,10 @@ PRODUCT_MANUFACTURER := Fairphone
 
 PRODUCT_SYSTEM_NAME := FP4eea
 
-BUILD_FINGERPRINT := "Fairphone/FP4eea/FP4:11/RKQ1.210503.001/FP4K:user/release-keys"
+PRODUCT_GMS_CLIENTID_BASE := android-alcatel
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=FP4eea \
-    PRIVATE_BUILD_DESC="qssi-user 11 RKQ1.210503.001 FP4K release-keys"
+    PRIVATE_BUILD_DESC="qssi-user 12 SKQ1.220201.001 SP21 release-keys" \
+    TARGET_PRODUCT=FP4eea
 
-PRODUCT_GMS_CLIENTID_BASE := android-alcatel
+BUILD_FINGERPRINT := "Fairphone/FP4eea/FP4:12/SKQ1.220201.001/SP21:user/release-keys"
