@@ -73,6 +73,9 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 
+# Chipset
+ro.soc.manufacturer=QTI
+
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -83,6 +86,8 @@ vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_idle_time_hdr=1
+vendor.display.disable_idle_time_video=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.enable_allow_idle_fallback=1
