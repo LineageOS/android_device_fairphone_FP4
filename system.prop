@@ -23,7 +23,7 @@ persist.dbg.wfc_avail_ovr=1
 debug.stagefright.ccodec=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
-ro.media.recorder-max-base-layer-fps = 60
+ro.media.recorder-max-base-layer-fps=60
 
 # Netmgr
 ro.vendor.use_data_netmgrd=true

@@ -132,6 +132,8 @@
         <MediaCodec name="c2.android.mpeg4.decoder" type="video/mp4v-es" update="true">
             <!-- measured 90%:149-1332 med:379/360 FLAKY(109 - 958 < mx=1400.6) RG.VARIANCE:2.1 -->
             <Limit name="measured-frame-rate-176x144" range="450-850" /> <!-- N=272 v90%=3.0 -->
+            <Limit name="measured-frame-rate-480x360" range="220-500" />
+            <Limit name="measured-frame-rate-1280x720" range="100-250" />
         </MediaCodec>
     </Decoders>
 
