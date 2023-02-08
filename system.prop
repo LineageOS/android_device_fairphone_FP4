@@ -14,6 +14,9 @@ persist.vendor.cne.feature=1
 # e-SIM
 masterclear.allow_retain_esim_profiles_after_fdr=1
 
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -40,3 +43,6 @@ telephony.lteOnCdmaDevice=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# System Server
+arm64.memtag.process.system_server=off
