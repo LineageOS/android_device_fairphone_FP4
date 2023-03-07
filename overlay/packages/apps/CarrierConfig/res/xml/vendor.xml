@@ -4782,6 +4782,27 @@
         <boolean name="carrier_wfc_ims_available_bool" value="true"/>
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false"/>
     </carrier_config>
+    <carrier_config mcc="310">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="311">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="312">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="313">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="314">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="315">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
+    <carrier_config mcc="316">
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true"/>
+    </carrier_config>
     <carrier_config mcc="310" mnc="0">
         <boolean name="rtt_auto_upgrade_bool" value="true"/>
         <boolean name="rtt_supported_bool" value="true"/>
