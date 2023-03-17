@@ -87,7 +87,6 @@
         <device name="SND_DEVICE_OUT_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
-        <device name="SND_DEVICE_OUT_VOICE_HAC" acdb_id="53"/>
         <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" acdb_id="53"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
@@ -131,7 +130,6 @@
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_HANDSET" backend="handset" interface="QUIN_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_HAC" backend="voice-hac" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" backend="voice-hac-handset" interface="QUIN_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_SPEAKER" interface="QUIN_MI2S_RX"/>
         <device name="SND_DEVICE_CAPTURE_VI_FEEDBACK" interface="QUIN_MI2S_TX"/>
