@@ -116,6 +116,7 @@ PRODUCT_PACKAGES += \
 
 # Audio (Hardware)
 PRODUCT_PACKAGES += \
+    audio_amplifier.lito \
     audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default
