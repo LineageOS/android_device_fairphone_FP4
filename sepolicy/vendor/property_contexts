@@ -1,6 +1,9 @@
 # Bluetooth MAC
 ro.vendor.t2m.btmac            u:object_r:vendor_t2m_sys_prop:s0
 
+# Camera
+vendor.t2m.camera_main.vcm_id  u:object_r:vendor_t2m_sys_prop:s0
+
 # Light Sensor Calibration
 ro.vendor.tct.backcaldata      u:object_r:vendor_tct_default_prop:s0
 ro.vendor.tct.frontcaldata     u:object_r:vendor_tct_default_prop:s0
