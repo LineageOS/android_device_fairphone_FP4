@@ -146,6 +146,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
+    user root
     group system wakelock
     disabled
 
