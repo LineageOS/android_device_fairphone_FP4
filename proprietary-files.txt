@@ -407,8 +407,7 @@ vendor/bin/feature_enabler_client
 vendor/etc/init/feature_enabler_client.rc
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/lib64/hw/fpsensor_fingerprint.default.so
+vendor/lib64/hw/fpsensor_fingerprint.default.so:vendor/lib64/hw/fingerprint.lito.so
 vendor/lib64/libfp_ext_svc2.so
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
 
