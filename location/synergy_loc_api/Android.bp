@@ -1,7 +1,0 @@
-
-cc_library_headers {
-
-    name: "libsynergyloc_api_headers",
-    export_include_dirs: ["."],
-    vendor: true,
-}
