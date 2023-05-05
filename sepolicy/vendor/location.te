@@ -1,0 +1,2 @@
+# xtra-daemon control
+get_prop(location, xtra_control_prop)
