@@ -498,10 +498,7 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
 # GNSS configs
-vendor/etc/apdr.conf
-vendor/etc/izat.conf
 vendor/etc/lowi.conf
-vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Iris
