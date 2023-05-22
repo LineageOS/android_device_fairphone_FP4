@@ -96,7 +96,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_SOURCE := kernel/fairphone/sm7225
-TARGET_KERNEL_CONFIG := FP4_defconfig
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/debugfs.config vendor/fairphone/FP4.config
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
