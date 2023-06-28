@@ -181,8 +181,6 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
     chown system system /sys/class/backlight/panel1-backlight/brightness
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
-    chown system system /sys/class/backlight/soc:backlight/brightness
-    chown system system /sys/class/backlight/soc:backlight/max_brightness
 
     # Allow access to sensors device attributes
     chown system system /sys/class/sensors/MPU6050-accel/enable
