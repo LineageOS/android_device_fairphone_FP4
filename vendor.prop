@@ -44,7 +44,6 @@ vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
-bluetooth.a2dp.source.aptx_priority.config=-1
 bluetooth.device.class_of_device=90,2,12
 bluetooth.device.default_name=Fairphone 4 5G
 bluetooth.hardware.power.idle_cur_ma=3
@@ -68,7 +67,7 @@ bluetooth.profile.sap.server.enabled?=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptxhd-ldac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.scram.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
