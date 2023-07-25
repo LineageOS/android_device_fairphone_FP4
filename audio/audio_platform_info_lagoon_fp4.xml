@@ -259,6 +259,11 @@
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="QUIN_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="QUIN_MI2S_RX-and-SLIMBUS_7_RX"/>
     </backend_names>
+    <device_names>
+        <device name="SND_DEVICE_IN_HANDSET_MIC_SB" alias="handset-mic2" />
+        <device name="SND_DEVICE_IN_HANDSET_MIC_NN" alias="handset-mic3" />
+        <device name="SND_DEVICE_IN_HANDSET_MIC_EXTERNAL" alias="handset-mic4" />
+    </device_names>
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>
         <microphone valid_mask="31" device_id="builtin_mic_1" type="AUDIO_DEVICE_IN_BUILTIN_MIC" address="bottom" location="AUDIO_MICROPHONE_LOCATION_MAINBODY"
