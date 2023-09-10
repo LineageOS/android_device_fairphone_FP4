@@ -58,6 +58,9 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/etc/libnfc-hal-st.conf)
+            sed -i 's|STNFC_HAL_LOGLEVEL=.*|STNFC_HAL_LOGLEVEL=0x12|g' "${2}"
+            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so)
             "${SIGSCAN}" -p "13 0a 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
