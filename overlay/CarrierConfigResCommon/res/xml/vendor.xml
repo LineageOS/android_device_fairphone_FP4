@@ -110,7 +110,7 @@
         </string-array>
         <boolean name="com.google.android.dialer.display_wifi_calling_button_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="false" />
-        <boolean name="show_operator_name_in_statusbar_bool" value="true" />
+        <boolean name="show_operator_name_in_statusbar_bool" value="false" />
         <boolean name="show_iccid_in_sim_status_bool" value="true" />
         <int name="carrier_cfnr_timer_default_int" value="0" />
 
