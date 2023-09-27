@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "465a8863_d1cf3a83",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-09-27T19:48:55Z",
+      "side": 1,
+      "message": "You can make it $(BOOT_SECURITY_PATCH) while at it.",
+      "range": {
+        "startLine": 194,
+        "startChar": 25,
+        "endLine": 194,
+        "endChar": 35
+      },
+      "revId": "5becee1c7f9560708f061335c52cc276a9267d17",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
