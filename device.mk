@@ -408,6 +408,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qti.dcvs.sh \
+    init.qti.early_init.sh \
+    init.qti.media.sh \
     init.qti.qcv.sh
 
 PRODUCT_PACKAGES += \
