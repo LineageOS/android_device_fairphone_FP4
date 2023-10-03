@@ -26,6 +26,10 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+#
 
 function 8953_sched_dcvs_eas()
 {
@@ -1099,6 +1103,36 @@ case "$target" in
         echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         echo 90 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
         ;;
+esac
+
+# For Kodiak target for which cdsp is defective, we read remote cdsp status from fastrpc node
+# and if its value is false we disable cdsp daemon by setting the cdsp disable propety to true
+case "$target" in
+	"lahaina")
+		if [ -f /sys/devices/soc0/chip_family ]; then
+			chip_family_id=`cat /sys/devices/soc0/chip_family`
+		else
+			chip_family_id=-1
+		fi
+
+		echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
+
+		case "$chip_family_id" in
+			"0x76")
+			if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/remote_cdsp_status ]; then
+				remote_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/remote_cdsp_status`
+			else
+				remote_cdsp_status=-1
+			fi
+
+			echo "adsprpc : remote_cdsp_status : $remote_cdsp_status" > /dev/kmsg
+
+			if [ $remote_cdsp_status -eq 0 ]; then
+				setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+				echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
+			fi
+		 esac
+		  ;;
 esac
 
 case "$target" in
@@ -4256,7 +4290,7 @@ case "$target" in
 
         #power/perf tunings for khaje
         case "$soc_id" in
-                 "518" )
+                 "518" | "561" | "585" | "586" )
 
             # Core control parameters on big
             echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -5230,7 +5264,7 @@ case "$target" in
     "msmnile")
 	# cpuset parameters
 	target_varient=`getprop ro.build.product`
-        if [ "$target_varient" == "msmnile_gvmq" ]; then
+        if [ "$target_varient" == "msmnile_gvmq" ] || [ "$target_varient" == "msmnile_gvmgh" ]; then
 		echo 4-7 > /dev/cpuset/background/cpus
 		echo 4-7 > /dev/cpuset/system-background/cpus
 
@@ -5282,14 +5316,11 @@ case "$target" in
 		echo 85 85 > /proc/sys/kernel/sched_downmigrate
 		echo 100 > /proc/sys/kernel/sched_group_upmigrate
 		echo 10 > /proc/sys/kernel/sched_group_downmigrate
-		echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 		echo 0-3 > /dev/cpuset/background/cpus
 		echo 0-3 > /dev/cpuset/system-background/cpus
 
 
-		# Turn off scheduler boost at the end
-		echo 0 > /proc/sys/kernel/sched_boost
 
 		# configure governor settings for silver cluster
 		echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
@@ -5381,6 +5412,10 @@ case "$target" in
 	                      done
 	           done
 	fi
+	# Turn off scheduler boost at the end
+	echo 0 > /proc/sys/kernel/sched_boost
+	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+
 	# memlat specific settings are moved to seperate file under
 	# device/target specific folder
 	setprop vendor.dcvs.prop 1
