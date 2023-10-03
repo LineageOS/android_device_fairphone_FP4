@@ -101,6 +101,7 @@ public:
     inline virtual void* getSibling2() { return NULL; }
     inline virtual double getGloRfLoss(uint32_t left __unused,
             uint32_t center __unused, uint32_t right __unused, uint8_t gloFrequency __unused) { return 0.0; }
+    inline virtual float getGeoidalSeparation(double latitude __unused, double longitude __unused) { return 0.0; }
 };
 
 class LocApiBase {
