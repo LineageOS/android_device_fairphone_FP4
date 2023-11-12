@@ -105,10 +105,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-# Atrace
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service
-
 # Audio (HIDL)
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
