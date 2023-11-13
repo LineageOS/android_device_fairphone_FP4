@@ -5,9 +5,6 @@ persist.bluetooth.disableinbandringing=false
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 
-# Charger
-ro.charger.enable_suspend=1
-
 # CNE
 persist.vendor.cne.feature=1
 
