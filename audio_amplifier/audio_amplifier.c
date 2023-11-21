@@ -92,7 +92,7 @@ int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
     aw_dev->usecase_tx->in_snd_device = SND_DEVICE_IN_CAPTURE_VI_FEEDBACK;
     list_init(&aw_dev->usecase_tx->device_list);
 
-    list_add_tail(&aw_dev->adev->usecase_list, &aw_dev->usecase_tx->list);
+    list_add_head(&aw_dev->adev->usecase_list, &aw_dev->usecase_tx->list);
     enable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
     enable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
 
