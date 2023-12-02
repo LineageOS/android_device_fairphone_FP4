@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0d9f850_24cd05f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-12-02T16:59:06Z",
+      "side": 1,
+      "message": "cherry pick https://review.lineageos.org/q/Ia06b336b30a8886bae522c6e8a76a1ca15da5edd instead? This will make git metadata match other devices.",
+      "revId": "16c809088d8be8d0a23023c15575bcfb3ee24836",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
