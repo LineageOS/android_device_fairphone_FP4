@@ -34,6 +34,24 @@
       "parentUuid": "d0d9f850_24cd05f2",
       "revId": "16c809088d8be8d0a23023c15575bcfb3ee24836",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8101ff00_e2ff2a63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-12-03T12:05:39Z",
+      "side": 1,
+      "message": "abandon your change, reset --hard to lineage-20 HEAD and cherry pick the change i listed.",
+      "parentUuid": "569d1892_a479ddb7",
+      "revId": "16c809088d8be8d0a23023c15575bcfb3ee24836",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
