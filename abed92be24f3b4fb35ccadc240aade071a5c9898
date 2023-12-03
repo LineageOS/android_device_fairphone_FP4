@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0abcfd2c_7b6f88ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-12-03T12:35:50Z",
+      "side": 1,
+      "message": "I don\u0027t maintain this device, so I\u0027m leaving this to mike.",
+      "revId": "abed92be24f3b4fb35ccadc240aade071a5c9898",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
