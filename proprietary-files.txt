@@ -1,4 +1,4 @@
-# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP20:user/release-keys
+# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP25:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/MTP/lito-lagoon-fp4-snd-card/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/Bluetooth_cal.acdb
