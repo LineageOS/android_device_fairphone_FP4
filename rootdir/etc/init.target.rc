@@ -48,6 +48,7 @@ on init
     start keymaster-4-0
     chmod 0660 /dev/fpsensor
     chown system system /dev/fpsensor
+    chown system camera /sys/devices/platform/soc/ac4a000.qcom,cci0/ac4a000.qcom,cci0:qcom,ois@0/ois_gain_get
 
 on early-fs
     start vold
@@ -66,6 +67,8 @@ on post-fs
 
     chown system system /dev/stmvl53l1_ranging
     chmod 0666 /dev/stmvl53l1_ranging
+    chown system camera /dev/cm4_ois0
+    chmod 0666 /dev/cm4_ois0
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
@@ -91,6 +94,7 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
+    setprop persist.vendor.camera.mmi_ldaf ""
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 

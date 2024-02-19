@@ -1,4 +1,4 @@
-# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP25:user/release-keys
+# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP29:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/MTP/lito-lagoon-fp4-snd-card/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/Bluetooth_cal.acdb
@@ -91,6 +91,38 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
+vendor/etc/camera/MotionDetParameter.cfg
+vendor/etc/camera/capture_cache
+vendor/etc/camera/capture_model
+vendor/etc/camera/capture_policy
+vendor/etc/camera/cnet_h384w512_quan_0317_int8.tflite
+vendor/etc/camera/intsense_config_singlebokeh.bin
+vendor/etc/camera/modnet_c12v2_in_h416_w544.bin
+vendor/etc/camera/modnet_c12v2_in_h416_w544.mnn
+vendor/etc/camera/params.txt
+vendor/etc/camera/params_SuperIQ.txt
+vendor/etc/camera/params_back_000_200.txt
+vendor/etc/camera/params_back_2000_4000.txt
+vendor/etc/camera/params_back_200_400.txt
+vendor/etc/camera/params_back_4000_10000.txt
+vendor/etc/camera/params_back_400_2000.txt
+vendor/etc/camera/params_front_0000_1000.txt
+vendor/etc/camera/params_front_1000_2500.txt
+vendor/etc/camera/params_front_2500_4000.txt
+vendor/etc/camera/params_front_4000_5000.txt
+vendor/etc/camera/params_wide_0000_1000.txt
+vendor/etc/camera/params_wide_1000_3000.txt
+vendor/etc/camera/params_wide_3000_8000.txt
+vendor/etc/camera/params_wide_8000_10000.txt
+vendor/etc/camera/params_zoom_0100_0250.txt
+vendor/etc/camera/params_zoom_0250_1400.txt
+vendor/etc/camera/params_zoom_10000_18000.txt
+vendor/etc/camera/params_zoom_1400_2300.txt
+vendor/etc/camera/params_zoom_2300_10000.txt
+vendor/etc/camera/quantize_scene_0528_freeze_graph.tflite
+vendor/etc/camera/sg_cap_cache
+vendor/etc/camera/sg_cap_model
+vendor/etc/camera/sg_cap_policy
 vendor/lib/libswvdec.so
 vendor/lib64/camera/com.qti.eeprom.gt24p128ef_imx576.so
 vendor/lib64/camera/com.qti.eeprom.imx582_gt24p128eh.so
@@ -123,9 +155,21 @@ vendor/lib64/com.qti.feature2.rt.bitra.so
 vendor/lib64/com.qti.feature2.serializer.bitra.so
 vendor/lib64/com.qti.feature2.stub.bitra.so
 vendor/lib64/com.qti.feature2.swmf.bitra.so
+vendor/lib64/com.tct.cameraalgo.gs.so
+vendor/lib64/com.tct.cameraalgo.hdr.so
+vendor/lib64/com.tct.cameraalgo.hwmfnr.so
+vendor/lib64/com.tct.cameraalgo.mirror.so
+vendor/lib64/com.tct.cameraalgo.morpholdc.so
+vendor/lib64/com.tct.cameraalgo.morphonight.so
+vendor/lib64/com.tct.cameraalgo.morphozoom.so
+vendor/lib64/com.tct.cameraalgo.singlebokeh.so
+vendor/lib64/com.tct.cameraalgo.tcldualbokeh.so
+vendor/lib64/com.tct.cameraalgo.watermark.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.bitra.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libanc_single_bokeh.so
+vendor/lib64/libanc_single_bokeh_rear.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
@@ -133,15 +177,23 @@ vendor/lib64/libcamerapostproc.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libipebpsstriping.so
+vendor/lib64/libmorpho_dcface.so
 vendor/lib64/libmorpho_distortion_correction.so
 vendor/lib64/libmorpho_hdr_checker.so
+vendor/lib64/libmorpho_image_refiner.so
 vendor/lib64/libmorpho_movie_stabilizer6.so
 vendor/lib64/libmorpho_smooth_zoom_preview.so
+vendor/lib64/libmorpho_super_resolution.so
+vendor/lib64/libmotionDet.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
+vendor/lib64/libtclSceneDetector.so
+vendor/lib64/libtcl_dualcam_bokeh_cap.so
+vendor/lib64/libtcltflite.so
+vendor/lib64/libtctcameraalgo.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so|0c6788ba8f7f59efd5c2d671e339a93d32dbc36c|99bbf4bf75ebc58021b10b843eb4728c9763964d
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
@@ -161,7 +213,7 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 
 # Camera components
-vendor/lib64/camera/components/com.morpho.node.drchecker.so
+vendor/lib64/camera/components/com.morpho.node.hdr.so
 vendor/lib64/camera/components/com.morpho.node.ldc.so
 vendor/lib64/camera/components/com.morpho.node.moviesolid.so
 vendor/lib64/camera/components/com.morpho.node.sat.so
@@ -199,6 +251,7 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
+vendor/lib64/camera/components/com.tct.node.scenedetect.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
