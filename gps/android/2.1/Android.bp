@@ -92,5 +92,5 @@ cc_binary {
         "android.hardware.gnss@2.1",
     ],
 
-    cflags: GNSS_CFLAGS + ["-DLOC_HIDL_VERSION=\"4.0\""],
+    cflags: GNSS_CFLAGS + ["-DLOC_HIDL_VERSION=\"4.3\""],
 }
