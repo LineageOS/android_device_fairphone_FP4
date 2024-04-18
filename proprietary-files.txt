@@ -446,7 +446,9 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Euicc
 system/app/T2mEuiccOverlay/T2mEuiccOverlay.apk
-system/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+
+# Euicc - from Fairphone/FP5/FP5:13/TKQ1.230127.002/TT4C:user/release-keys
+system/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED|dad780cce039f71b87f29ea272f265cc48dbfb31
 
 # Feature enabler client
 vendor/bin/feature_enabler_client
