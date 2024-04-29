@@ -16,6 +16,24 @@
       "message": "this file is present in the latest FP4 LineageOS build.",
       "revId": "f4d3846d9a0b77d798fae1d31b87b7b089402dad",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e275a838_2ef782dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32717
+      },
+      "writtenOn": "2024-04-29T05:06:30Z",
+      "side": 1,
+      "message": "You mean in this build: `lineage-21.0-20240424-nightly-FP4-signed` ?",
+      "parentUuid": "49bddb73_0d8515a2",
+      "revId": "f4d3846d9a0b77d798fae1d31b87b7b089402dad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
