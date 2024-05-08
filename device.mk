@@ -200,8 +200,7 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libvulkan \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.11.vendor \
+    vendor.display.config@1.0.vendor:64 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
@@ -234,16 +233,16 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-impl-qti:64 \
     android.hardware.gnss@2.1-service-qti \
     gnss@2.0-base.policy \
     gnss@2.0-xtra-daemon.policy \
     gnss@2.0-xtwifi-client.policy \
     gnss@2.0-xtwifi-inet-agent.policy \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libloc_socket
+    libbatching:64 \
+    libgeofencing:64 \
+    libgnss:64 \
+    libloc_socket:64
 
 # GPS configs
 PRODUCT_PACKAGES += \
@@ -264,9 +263,7 @@ PRODUCT_PACKAGES += \
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    liboffloadhal
+    IPACM_cfg.xml
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -307,8 +304,8 @@ PRODUCT_COPY_FILES += \
 
 # Media (Codec2)
 PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor:32 \
+    libcodec2_vndk.vendor:32
 
 # Net
 PRODUCT_PACKAGES += \
@@ -320,7 +317,6 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2 \
     android.hardware.nfc@1.2.vendor:64 \
     android.hardware.secure_element@1.2.vendor:64 \
     com.android.nfc_extras \
@@ -363,10 +359,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor:64 \
     android.hardware.radio.config@1.2.vendor:64 \
     android.hardware.radio.deprecated@1.0.vendor:64 \
-    libjson \
+    libjson:64 \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
+    librmnetctl:64 \
     libxml2
 
 # Sensors
@@ -466,7 +462,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
-    libwfdaac_vendor
+    libwfdaac_vendor:32
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
