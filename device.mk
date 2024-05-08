@@ -200,8 +200,7 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libvulkan \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.11.vendor \
+    vendor.display.config@1.0.vendor:64 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
@@ -307,8 +306,8 @@ PRODUCT_COPY_FILES += \
 
 # Media (Codec2)
 PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor:32 \
+    libcodec2_vndk.vendor:32
 
 # Net
 PRODUCT_PACKAGES += \
@@ -320,7 +319,6 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2 \
     android.hardware.nfc@1.2.vendor:64 \
     android.hardware.secure_element@1.2.vendor:64 \
     com.android.nfc_extras \
@@ -363,10 +361,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor:64 \
     android.hardware.radio.config@1.2.vendor:64 \
     android.hardware.radio.deprecated@1.0.vendor:64 \
-    libjson \
+    libjson:64 \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
+    librmnetctl:64 \
     libxml2
 
 # Sensors
@@ -466,7 +464,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
-    libwfdaac_vendor
+    libwfdaac_vendor:32
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
