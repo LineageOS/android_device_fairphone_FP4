@@ -14,3 +14,9 @@ set_prop(tctd, vendor_t2m_sys_prop)
 
 # Light Sensor Calibration
 set_prop(tctd, vendor_tct_default_prop)
+
+# Ignore unused tctd functionality
+dontaudit tctd persist_t2m_param_file:dir write;
+dontaudit tctd persist_t2m_param_file:file write;
+dontaudit tctd self:qipcrtr_socket create;
+dontaudit tctd vendor_tct_ignored_prop:property_service set;

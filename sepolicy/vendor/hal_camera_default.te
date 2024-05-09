@@ -4,4 +4,7 @@ allow hal_camera_default mnt_vendor_file:dir r_dir_perms;
 
 allow hal_camera_default tct_mmitest_sysfs:file r_file_perms;
 
+get_prop(hal_camera_default, vendor_tct_default_prop)
 set_prop(hal_camera_default, vendor_t2m_sys_prop)
+
+dontaudit hal_camera_default vendor_tct_ignored_prop:file read;
