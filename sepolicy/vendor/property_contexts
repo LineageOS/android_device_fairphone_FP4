@@ -13,3 +13,14 @@ vendor.t2m.camera_main.sn      u:object_r:vendor_t2m_sys_prop:s0
 vendor.t2m.camera_aux.sn       u:object_r:vendor_t2m_sys_prop:s0
 vendor.t2m.camera_front.sn     u:object_r:vendor_t2m_sys_prop:s0
 vendor.t2m.fingerprint.chipid  u:object_r:vendor_t2m_sys_prop:s0
+
+# Tctd ignored properties
+ro.vendor.tct.handsetref       u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.mfg.date         u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.multiple         u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.ptm              u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.trace.bsn        u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.trace.pth        u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.trace.pts        u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.trace.skd        u:object_r:vendor_tct_ignored_prop:s0
+ro.vendor.tct.wifimac          u:object_r:vendor_tct_ignored_prop:s0
