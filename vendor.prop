@@ -152,10 +152,6 @@ persist.vendor.data.mode=concurrent
 # OEM Unlock
 ro.oem_unlock_supported=1
 
-# PASR
-vendor.pasr.activemode.enabled=true
-vendor.power.pasr.enabled=true
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
