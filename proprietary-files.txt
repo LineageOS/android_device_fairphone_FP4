@@ -755,16 +755,10 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libswvdec.so
 
 # Pasr Manager
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
-vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
-vendor/lib/hw/vendor.qti.power.pasrmanager@1.0-impl.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
-vendor/lib/vendor.qti.power.pasrmanager@1.0.so
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
