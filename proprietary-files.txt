@@ -806,6 +806,10 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 # QCC
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
+# QCV
+vendor/bin/init.qti.qcv.sh
+vendor/etc/init/init.qti.qcv.rc
+
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml

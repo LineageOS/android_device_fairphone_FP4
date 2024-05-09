@@ -261,6 +261,25 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.default \
+    fstab.default.ramdisk \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.recovery.rc \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh \
+    init.qti.media.sh \
+    init.stnfc.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -398,32 +417,6 @@ PRODUCT_BOOT_JARS += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh \
-    init.qti.early_init.sh \
-    init.qti.media.sh \
-    init.qti.qcv.sh
-
-PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.qti.qcv.rc \
-    init.recovery.qcom.rc \
-    init.stnfc.rc \
-    init.target.rc \
-    fstab.default \
-    ueventd.qcom.rc
 
 # USB
 PRODUCT_PACKAGES += \
