@@ -1,6 +1,24 @@
+# CNE
+persist.vendor.cne.feature=1
+
 # DPM
 persist.vendor.dpm.feature=11
 
-# Telephony
-ro.telephony.sim_slots.count=2
-telephony.active_modems.max_count=2
+# GPS
+persist.backup.ntpServer=0.pool.ntp.org
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+
+# QVA
+ro.vendor.qti.va_aosp.support=1
+
+# Radio
+ril.subscription.types=NV,RUIM
