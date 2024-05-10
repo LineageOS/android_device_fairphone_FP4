@@ -19,23 +19,6 @@
 /sys/devices/platform/soc/aab0000\.qcom,venus/subsys[0-9]+/name            u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/aab0000\.qcom,venus/subsys[0-9]+/restart_level   u:object_r:vendor_sysfs_ssr_toggle:s0
 
-# Sysfs (Wakeup)
-/sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)?                          u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_aac/wakeup[0-9]+(/.*)?                       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_alac/wakeup[0-9]+(/.*)?                      u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_amrnb/wakeup[0-9]+(/.*)?                     u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_amrwb/wakeup[0-9]+(/.*)?                     u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_amrwbplus/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_ape/wakeup[0-9]+(/.*)?                       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_evrc/wakeup[0-9]+(/.*)?                      u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_g711alaw/wakeup[0-9]+(/.*)?                  u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_g711mlaw/wakeup[0-9]+(/.*)?                  u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_mp3/wakeup[0-9]+(/.*)?                       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_multi_aac/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)?                     u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_wma/wakeup[0-9]+(/.*)?                       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/msm_wmapro/wakeup[0-9]+(/.*)?                    u:object_r:sysfs_wakeup:s0
-
 # Partitions
 /dev/block/platform/soc/1d84000\.ufshc/by-name/traceability                u:object_r:traceability_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/tunning                     u:object_r:vendor_modem_efs_partition_device:s0
