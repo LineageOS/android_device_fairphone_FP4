@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2022 The Linux Foundation
+     SPDX-License-Identifier: BSD-3-Clause
+-->
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
         <name>vendor.fpsensor.hardware.fpsensorhidlsvc</name>
