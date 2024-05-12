@@ -198,7 +198,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libsdmcore \
     libsdmutils \
-    libvulkan \
     vendor.display.config@1.0.vendor:64 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
