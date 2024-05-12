@@ -139,17 +139,9 @@ PRODUCT_PACKAGES += \
 
 # Audio (SoundFX)
 PRODUCT_PACKAGES += \
-    libaudiopreprocessing \
-    libbundlewrapper \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libreverbwrapper \
-    libvisualizer \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
