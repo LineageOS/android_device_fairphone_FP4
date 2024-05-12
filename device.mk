@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
     libqdMetaData \
-    libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     memtrack.lito \
