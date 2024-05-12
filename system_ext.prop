@@ -22,3 +22,5 @@ ro.vendor.qti.va_aosp.support=1
 
 # Radio
 ril.subscription.types=NV,RUIM
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2

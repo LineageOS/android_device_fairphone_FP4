@@ -50,8 +50,8 @@ vendor.audio.feature.kpi_optimize.enable=true
 vendor.audio.feature.multi_voice_session.enable=true
 vendor.audio.feature.ras.enable=true
 vendor.audio.feature.snd_mon.enable=true
-vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.spkr_prot.enable=true
+vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_burst_mode.enable=true
@@ -149,6 +149,9 @@ ro.hardware.vulkan=adreno
 vendor.gralloc.disable_ubwc=0
 vendor.opengles.version=196610
 
+# Incremental FS
+ro.incremental.enable=yes
+
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
@@ -183,7 +186,7 @@ ro.recovery.usb.fastboot.pid=D00D
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.product_string=Fairphone 4 5G
-vendor.usb.qdss.inst.name=qdss
+vendor.usb.qdss.inst.name=qdss_mdm
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
