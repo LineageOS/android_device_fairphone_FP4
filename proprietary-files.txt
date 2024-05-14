@@ -160,9 +160,6 @@ vendor/lib64/libmorpho_smooth_zoom_preview.so
 vendor/lib64/libmorpho_super_resolution.so
 vendor/lib64/libmotionDet.so
 vendor/lib64/libofflinelog.so
-vendor/lib64/libsns_fastRPC_util.so
-vendor/lib64/libsnsapi.so
-vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libspectre.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtclSceneDetector.so
@@ -953,7 +950,10 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
