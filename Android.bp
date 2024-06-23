@@ -1,8 +1,15 @@
 //
-// SPDX-FileCopyrightText: 2021 The LineageOS Project
+// SPDX-FileCopyrightText: 2021-2024 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 //
 
 soong_namespace {
     imports: ["hardware/qcom-caf/bootctrl"],
+}
+
+install_symlink {
+    name: "firmware_WCNSS_qcom_cfg.ini_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
+    symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
