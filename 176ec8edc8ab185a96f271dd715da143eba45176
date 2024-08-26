@@ -16,6 +16,24 @@
       "message": "Comments won\u0027t mess with section kanging?",
       "revId": "176ec8edc8ab185a96f271dd715da143eba45176",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f80ba35b_c553e833",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-08-26T18:13:07Z",
+      "side": 1,
+      "message": "we really ought to have a way to do per blob comments. Maybe implementing // as \"sort with following line\" and \"don\u0027t extract\"?",
+      "parentUuid": "7d023e96_2a20936d",
+      "revId": "176ec8edc8ab185a96f271dd715da143eba45176",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
