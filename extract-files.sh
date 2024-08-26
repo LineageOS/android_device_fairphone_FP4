@@ -64,6 +64,9 @@ function blob_fixup() {
         vendor/lib64/libmorpho_movie_stabilizer6.so)
             grep -q libutils.so "${2}" || "${PATCHELF}" --add-needed "libutils.so" "${2}"
             ;;
+        vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so)
+            grep -q libhidlbase_shim.so "{$2}" || "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
+            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so)
             "${SIGSCAN}" -p "13 0a 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
