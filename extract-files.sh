@@ -68,6 +68,7 @@ function blob_fixup() {
             "${SIGSCAN}" -p "13 0a 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
         vendor/lib64/hw/fingerprint.lito.so)
+            "${PATCHELF}" --set-soname fingerprint.lito.so "${2}"
             sed -i 's|fpsensor_fingerprint\x00|fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|g' "${2}"
             sed -i 's|persist.dev.fp_log_level|persist.odm.fp_log_level|g' "${2}"
             ;;
