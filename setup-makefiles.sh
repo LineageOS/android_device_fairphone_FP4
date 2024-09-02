@@ -48,7 +48,6 @@ function lib_to_package_fixup_vendor_variants() {
             echo "$1-vendor"
             ;;
         libOmxCore | \
-            libril | \
             libwpa_client) ;;
         *)
             return 1
