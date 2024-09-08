@@ -1,7 +1,6 @@
 # Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP2N:user/release-keys
 
 # Current blobs with ELF checks disabled:
-# libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a gnu makefile target
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
 
 # ACDB
@@ -657,8 +656,6 @@ vendor/lib/libqcodec2_v4l2codec.so
 
 # Media configs
 vendor/etc/media_lagoon/video_system_specs.json
-vendor/etc/seccomp_policy/mediacodec.policy
-vendor/etc/system_properties.xml
 
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
@@ -687,31 +684,6 @@ vendor/etc/st21nfc_conf.txt
 # NFC (Firmware)
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
-
-# OMX
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libdsd2pcm.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so;DISABLE_CHECKELF
-vendor/lib64/libOmxWmaDec.so
 
 # PASR manager
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
