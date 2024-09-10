@@ -95,6 +95,10 @@ function blob_fixup() {
             sed -i 's|fpsensor_fingerprint\x00|fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|g' "${2}"
             sed -i 's|persist.dev.fp_log_level|persist.odm.fp_log_level|g' "${2}"
             ;;
+        vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
