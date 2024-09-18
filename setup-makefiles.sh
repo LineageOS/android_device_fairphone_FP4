@@ -51,7 +51,6 @@ function lib_to_package_fixup_vendor_variants() {
             ;;
         libOmxCore | \
             libril | \
-            libwfdaac_vendor | \
             libwpa_client) ;;
         *)
             return 1
