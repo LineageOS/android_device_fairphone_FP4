@@ -66,7 +66,7 @@ static int is_speaker(uint32_t snd_device) {
     return speaker;
 }
 
-int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
+static int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
     aw_dev->adev = (struct audio_device*)adev;
     int pcm_dev_tx_id = 0, rc = 0;
     struct pcm_config pcm_config_aw882xx = {
@@ -139,7 +139,7 @@ error:
     return rc;
 }
 
-void aw882xx_stop_feedback(void* adev, uint32_t snd_device) {
+static void aw882xx_stop_feedback(void* adev, uint32_t snd_device) {
     aw_dev->adev = (struct audio_device*)adev;
     if (!aw_dev) {
         ALOGE("%s: Invalid params", __func__);
