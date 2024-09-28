@@ -111,7 +111,7 @@ int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
 
     aw_dev->aw882xx_out =
             pcm_open(aw_dev->adev->snd_card, pcm_dev_tx_id, PCM_IN, &pcm_config_aw882xx);
-    if (!(aw_dev->aw882xx_out || pcm_is_ready(aw_dev->aw882xx_out))) {
+    if (!pcm_is_ready(aw_dev->aw882xx_out)) {
         ALOGE("%d: %s", __LINE__, pcm_get_error(aw_dev->aw882xx_out));
         rc = -EIO;
         goto error;
