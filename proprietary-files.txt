@@ -1,4 +1,4 @@
-# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP2I:user/release-keys
+# Unpinned blobs from Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP2L:user/release-keys
 
 # Current blobs with ELF checks disabled:
 # libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a gnu makefile target
