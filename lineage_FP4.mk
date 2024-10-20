@@ -24,11 +24,8 @@ PRODUCT_BRAND := Fairphone
 PRODUCT_MODEL := FP4
 PRODUCT_MANUFACTURER := Fairphone
 
-PRODUCT_SYSTEM_NAME := FP4eea
-
 PRODUCT_GMS_CLIENTID_BASE := android-alcatel
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
-
-BUILD_FINGERPRINT := Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP2L:user/release-keys
+    BuildFingerprint=Fairphone/FP4eea/FP4:13/TKQ1.230127.002/TP2L:user/release-keys \
+    DeviceProduct=FP4eea
