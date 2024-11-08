@@ -4,6 +4,9 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Default paddings for content around the corners. -->
+    <dimen name="rounded_corner_content_padding">14dp</dimen>
+
     <!-- The default height of the status bar used in {@link SystemBarUtils#getStatusBarHeight} to
          calculate the status bar height. -->
     <dimen name="status_bar_height_default">28dp</dimen>

@@ -109,10 +109,10 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">
-        M -145 0
-        L -145 81
-        L 145 81
-        L 145 0
+        M -100 0
+        L -100 81
+        L 100 81
+        L 100 0
         Z
     </string>
 
