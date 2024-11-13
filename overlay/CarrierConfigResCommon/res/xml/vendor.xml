@@ -267,8 +267,6 @@
         <boolean name="editable_wfc_mode_bool" value="true" />
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
-        <int name="carrier_default_wfc_ims_mode_int" value="10" />
-        <int name="carrier_default_wfc_ims_roaming_mode_int" value="10" />
         <int name="maxMessageSize" value="307200" />
         <string name="wifi_calling_settings_title">Bellen via Wi-Fi</string>
         <boolean name="wfc_toggle_show" value="true" />
@@ -1333,7 +1331,6 @@
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
         <boolean name="show_wifi_calling_icon_in_status_bar_bool" value="true" />
-        <int name="carrier_default_wfc_ims_mode_int" value="10" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
         <int name="maxMessageSize" value="307200" />
         <string name="wifi_calling_settings_title">Wi-Fi volání</string>
@@ -2908,14 +2905,12 @@
         <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
-        <int name="carrier_default_wfc_ims_mode_int" value="10" />
         <int name="maxMessageSize" value="307200" />
         <string name="wifi_calling_settings_title">WLAN Call</string>
         <string name="status_hint_label_wifi_call">WLAN Call</string>
         <boolean name="wfc_toggle_show" value="true" />
         <boolean name="show_wifi_calling_summary_bool" value="false" />
         <boolean name="editable_wfc_mode_bool" value="true" />
-        <int name="carrier_default_wfc_ims_roaming_mode_int" value="10" />
         <boolean name="show_wifi_calling_icon_in_status_bar_bool" value="true" />
         <int name="wfc_spn_format_idx_int" value="2" />
         <int name="wfc_data_spn_format_idx_int" value="2" />
@@ -3311,14 +3306,12 @@
         <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
-        <int name="carrier_default_wfc_ims_mode_int" value="10" />
         <int name="maxMessageSize" value="307200" />
         <string name="wifi_calling_settings_title">WLAN Call</string>
         <string name="status_hint_label_wifi_call">WLAN Call</string>
         <boolean name="wfc_toggle_show" value="true" />
         <boolean name="show_wifi_calling_summary_bool" value="false" />
         <boolean name="editable_wfc_mode_bool" value="true" />
-        <int name="carrier_default_wfc_ims_roaming_mode_int" value="10" />
         <boolean name="show_wifi_calling_icon_in_status_bar_bool" value="true" />
         <int name="wfc_spn_format_idx_int" value="2" />
         <int name="wfc_data_spn_format_idx_int" value="2" />
