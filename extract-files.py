@@ -58,7 +58,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
         .regex_replace('STNFC_HAL_LOGLEVEL=.*', 'STNFC_HAL_LOGLEVEL=0x12'),
     'vendor/lib64/hw/fingerprint.lito.so': blob_fixup()
-        .patchelf_version('0_17_2')
         .fix_soname()
         .binary_regex_replace(b'fpsensor_fingerprint\x00', b'fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
         .binary_regex_replace(b'persist.dev.fp_log_level', b'persist.odm.fp_log_level'),
