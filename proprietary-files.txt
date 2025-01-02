@@ -3,7 +3,6 @@
 # Current blobs with ELF checks disabled:
 # libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a gnu makefile target
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
-# libril-qcril-hook-oem depends on libril, which is a gnu makefile target
 
 # ACDB
 vendor/etc/acdbdata/MTP/lito-lagoon-fp4-snd-card/Bluetooth_cal.acdb:vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/Bluetooth_cal.acdb
