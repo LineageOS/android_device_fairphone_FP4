@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2020-2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2020-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -8,6 +8,7 @@
 //#define LOG_NDEBUG 0
 
 #include <cutils/str_parms.h>
+#include <dlfcn.h>
 #include <hardware/audio_amplifier.h>
 #include <hardware/hardware.h>
 #include <log/log.h>
@@ -16,7 +17,6 @@
 #include <sys/types.h>
 
 /* clang-format off */
-#include "audio_hw.h"
 #include "platform.h"
 #include "platform_api.h"
 /* clang-format on */
@@ -28,6 +28,13 @@ typedef struct amp_device {
     struct audio_device* adev;
     struct audio_usecase* usecase_tx;
     struct pcm* aw882xx_out;
+    void* audio_primary_lib;
+    int (*enable_snd_device)(struct audio_device*, snd_device_t);
+    int (*enable_audio_route)(struct audio_device*, struct audio_usecase*);
+    int (*disable_snd_device)(struct audio_device*, snd_device_t);
+    int (*disable_audio_route)(struct audio_device*, struct audio_usecase*);
+    int (*platform_get_pcm_device_id)(audio_usecase_t, int);
+    struct audio_usecase* (*get_usecase_from_list)(const struct audio_device*, audio_usecase_t);
 } aw_t;
 
 static aw_t* aw_dev = NULL;
@@ -98,10 +105,11 @@ static int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
     list_init(&aw_dev->usecase_tx->device_list);
 
     list_add_head(&aw_dev->adev->usecase_list, &aw_dev->usecase_tx->list);
-    enable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
-    enable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+    aw_dev->enable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
+    aw_dev->enable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
 
-    pcm_dev_tx_id = platform_get_pcm_device_id(aw_dev->usecase_tx->id, aw_dev->usecase_tx->type);
+    pcm_dev_tx_id =
+            aw_dev->platform_get_pcm_device_id(aw_dev->usecase_tx->id, aw_dev->usecase_tx->type);
     ALOGD("pcm_dev_tx_id = %d", pcm_dev_tx_id);
     if (pcm_dev_tx_id < 0) {
         ALOGE("%d: Invalid pcm device for usecase (%d)", __LINE__, aw_dev->usecase_tx->id);
@@ -132,8 +140,8 @@ error:
         aw_dev->aw882xx_out = NULL;
     }
     list_remove(&aw_dev->usecase_tx->list);
-    disable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
-    disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+    aw_dev->disable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
+    aw_dev->disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
     free(aw_dev->usecase_tx);
 
     return rc;
@@ -153,12 +161,12 @@ static void aw882xx_stop_feedback(void* adev, uint32_t snd_device) {
         aw_dev->aw882xx_out = NULL;
     }
 
-    disable_snd_device(aw_dev->adev, SND_DEVICE_IN_CAPTURE_VI_FEEDBACK);
+    aw_dev->disable_snd_device(aw_dev->adev, SND_DEVICE_IN_CAPTURE_VI_FEEDBACK);
 
-    aw_dev->usecase_tx = get_usecase_from_list(aw_dev->adev, USECASE_AUDIO_SPKR_CALIB_TX);
+    aw_dev->usecase_tx = aw_dev->get_usecase_from_list(aw_dev->adev, USECASE_AUDIO_SPKR_CALIB_TX);
     if (aw_dev->usecase_tx) {
         list_remove(&aw_dev->usecase_tx->list);
-        disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+        aw_dev->disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
         free(aw_dev->usecase_tx);
     }
     return;
@@ -177,7 +185,12 @@ static int amp_set_feedback(UNUSED amplifier_device_t* device, void* adev, uint3
 
 static int amp_dev_close(hw_device_t* device) {
     aw_t* dev = (aw_t*)device;
-    if (dev) free(dev);
+    if (dev) {
+        if (dev->audio_primary_lib) {
+            dlclose(dev->audio_primary_lib);
+        }
+        free(dev);
+    }
 
     return 0;
 }
@@ -213,6 +226,36 @@ static int amp_module_open(const hw_module_t* module, const char* name, hw_devic
     aw_dev->amp_dev.out_set_parameters = NULL;
     aw_dev->amp_dev.in_set_parameters = NULL;
     aw_dev->amp_dev.set_feedback = amp_set_feedback;
+
+    aw_dev->audio_primary_lib = dlopen(LIB_AUDIO_HAL, RTLD_NOW);
+    if (!aw_dev->audio_primary_lib) {
+        ALOGE("%s:%d: Unable to dlopen %s: %s\n", __func__, __LINE__, LIB_AUDIO_HAL, dlerror());
+        free(aw_dev);
+        return -ENODEV;
+    }
+
+    aw_dev->enable_snd_device = (int (*)(struct audio_device*, snd_device_t))dlsym(
+            aw_dev->audio_primary_lib, "enable_snd_device");
+    aw_dev->enable_audio_route = (int (*)(struct audio_device*, struct audio_usecase*))dlsym(
+            aw_dev->audio_primary_lib, "enable_audio_route");
+    aw_dev->disable_snd_device = (int (*)(struct audio_device*, snd_device_t))dlsym(
+            aw_dev->audio_primary_lib, "disable_snd_device");
+    aw_dev->disable_audio_route = (int (*)(struct audio_device*, struct audio_usecase*))dlsym(
+            aw_dev->audio_primary_lib, "disable_audio_route");
+    aw_dev->platform_get_pcm_device_id = (int (*)(audio_usecase_t, int))dlsym(
+            aw_dev->audio_primary_lib, "platform_get_pcm_device_id");
+    aw_dev->get_usecase_from_list =
+            (struct audio_usecase * (*)(const struct audio_device*, audio_usecase_t))
+                    dlsym(aw_dev->audio_primary_lib, "get_usecase_from_list");
+
+    if (!aw_dev->enable_snd_device || !aw_dev->enable_audio_route ||
+        !aw_dev->disable_snd_device || !aw_dev->disable_audio_route ||
+        !aw_dev->platform_get_pcm_device_id || !aw_dev->get_usecase_from_list) {
+        ALOGE("%s:%d: Unable to dlsym one or more symbols: %s\n", __func__, __LINE__, dlerror());
+        dlclose(aw_dev->audio_primary_lib);
+        free(aw_dev);
+        return -ENODEV;
+    }
 
     *device = (hw_device_t*)aw_dev;
 
