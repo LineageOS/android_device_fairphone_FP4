@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2020-2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2020-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -8,6 +8,7 @@
 //#define LOG_NDEBUG 0
 
 #include <cutils/str_parms.h>
+#include <dlfcn.h>
 #include <hardware/audio_amplifier.h>
 #include <hardware/hardware.h>
 #include <log/log.h>
@@ -16,7 +17,6 @@
 #include <sys/types.h>
 
 /* clang-format off */
-#include "audio_hw.h"
 #include "platform.h"
 #include "platform_api.h"
 /* clang-format on */
@@ -28,6 +28,12 @@ typedef struct amp_device {
     struct audio_device* adev;
     struct audio_usecase* usecase_tx;
     struct pcm* aw882xx_out;
+    typeof(enable_snd_device)* enable_snd_device;
+    typeof(enable_audio_route)* enable_audio_route;
+    typeof(disable_snd_device)* disable_snd_device;
+    typeof(disable_audio_route)* disable_audio_route;
+    typeof(platform_get_pcm_device_id)* platform_get_pcm_device_id;
+    typeof(get_usecase_from_list)* get_usecase_from_list;
 } aw_t;
 
 static aw_t* aw_dev = NULL;
@@ -98,10 +104,11 @@ static int aw882xx_start_feedback(void* adev, uint32_t snd_device) {
     list_init(&aw_dev->usecase_tx->device_list);
 
     list_add_head(&aw_dev->adev->usecase_list, &aw_dev->usecase_tx->list);
-    enable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
-    enable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+    aw_dev->enable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
+    aw_dev->enable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
 
-    pcm_dev_tx_id = platform_get_pcm_device_id(aw_dev->usecase_tx->id, aw_dev->usecase_tx->type);
+    pcm_dev_tx_id =
+            aw_dev->platform_get_pcm_device_id(aw_dev->usecase_tx->id, aw_dev->usecase_tx->type);
     ALOGD("pcm_dev_tx_id = %d", pcm_dev_tx_id);
     if (pcm_dev_tx_id < 0) {
         ALOGE("%d: Invalid pcm device for usecase (%d)", __LINE__, aw_dev->usecase_tx->id);
@@ -132,8 +139,8 @@ error:
         aw_dev->aw882xx_out = NULL;
     }
     list_remove(&aw_dev->usecase_tx->list);
-    disable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
-    disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+    aw_dev->disable_snd_device(aw_dev->adev, aw_dev->usecase_tx->in_snd_device);
+    aw_dev->disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
     free(aw_dev->usecase_tx);
 
     return rc;
@@ -153,12 +160,12 @@ static void aw882xx_stop_feedback(void* adev, uint32_t snd_device) {
         aw_dev->aw882xx_out = NULL;
     }
 
-    disable_snd_device(aw_dev->adev, SND_DEVICE_IN_CAPTURE_VI_FEEDBACK);
+    aw_dev->disable_snd_device(aw_dev->adev, SND_DEVICE_IN_CAPTURE_VI_FEEDBACK);
 
-    aw_dev->usecase_tx = get_usecase_from_list(aw_dev->adev, USECASE_AUDIO_SPKR_CALIB_TX);
+    aw_dev->usecase_tx = aw_dev->get_usecase_from_list(aw_dev->adev, USECASE_AUDIO_SPKR_CALIB_TX);
     if (aw_dev->usecase_tx) {
         list_remove(&aw_dev->usecase_tx->list);
-        disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
+        aw_dev->disable_audio_route(aw_dev->adev, aw_dev->usecase_tx);
         free(aw_dev->usecase_tx);
     }
     return;
@@ -213,6 +220,25 @@ static int amp_module_open(const hw_module_t* module, const char* name, hw_devic
     aw_dev->amp_dev.out_set_parameters = NULL;
     aw_dev->amp_dev.in_set_parameters = NULL;
     aw_dev->amp_dev.set_feedback = amp_set_feedback;
+
+#define LOAD_AHAL_SYMBOL(symbol)                                          \
+    do {                                                                  \
+        aw_dev->symbol = dlsym(RTLD_NEXT, #symbol);                       \
+        if (aw_dev->symbol == NULL) {                                     \
+            ALOGW("%s: %s not found (%s)", __func__, #symbol, dlerror()); \
+            free(aw_dev);                                                 \
+            return -ENODEV;                                               \
+        }                                                                 \
+    } while (0)
+
+    LOAD_AHAL_SYMBOL(enable_snd_device);
+    LOAD_AHAL_SYMBOL(enable_audio_route);
+    LOAD_AHAL_SYMBOL(disable_snd_device);
+    LOAD_AHAL_SYMBOL(disable_audio_route);
+    LOAD_AHAL_SYMBOL(platform_get_pcm_device_id);
+    LOAD_AHAL_SYMBOL(get_usecase_from_list);
+
+#undef LOAD_AHAL_SYMBOL
 
     *device = (hw_device_t*)aw_dev;
 
