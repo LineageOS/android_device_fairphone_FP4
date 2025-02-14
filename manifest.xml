@@ -4,6 +4,7 @@
      SPDX-License-Identifier: BSD-3-Clause
 -->
 <manifest version="2.0" type="device" target-level="6">
+    <kernel target-level="5"/>
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
