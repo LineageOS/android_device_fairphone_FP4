@@ -1,6 +1,9 @@
 # e-SIM
 masterclear.allow_retain_esim_profiles_after_fdr=1
 
+# eBPF
+ro.bpf.kver_override=5.10.239
+
 # System server
 arm64.memtag.process.system_server=off
 
