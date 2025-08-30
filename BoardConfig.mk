@@ -124,9 +124,6 @@ TARGET_MODULE_ALIASES += \
 TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
 
-# Media
-TARGET_USES_ION := true
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
