@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80cd57ad_69039b79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2025-10-24T23:15:27Z",
+      "side": 1,
+      "message": "I\u0027m seeing a trend here, maybe this should be moved to common for all qcom devices pre-sm8650.",
+      "revId": "9988e4e3445267885f826c43f5a67be7e9b2d25e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
