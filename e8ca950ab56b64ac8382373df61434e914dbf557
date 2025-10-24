@@ -16,6 +16,24 @@
       "message": "Did you want to put it under NFC section?",
       "revId": "e8ca950ab56b64ac8382373df61434e914dbf557",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9688ed6b_82088487",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-10-24T21:37:35Z",
+      "side": 1,
+      "message": "Meh git cherrypick wasn\u0027t smart",
+      "parentUuid": "24f2a116_1e5cfcef",
+      "revId": "e8ca950ab56b64ac8382373df61434e914dbf557",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
