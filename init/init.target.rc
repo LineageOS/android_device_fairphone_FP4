@@ -48,7 +48,6 @@ on init
     start keymaster-4-0
     chmod 0660 /dev/fpsensor
     chown system system /dev/fpsensor
-    chown system camera /sys/devices/platform/soc/ac4a000.qcom,cci0/ac4a000.qcom,cci0:qcom,ois@0/ois_gain_get
 
 on early-fs
     start vold
@@ -65,11 +64,6 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    chown system system /dev/stmvl53l1_ranging
-    chmod 0666 /dev/stmvl53l1_ranging
-    chown system camera /dev/cm4_ois0
-    chmod 0666 /dev/cm4_ois0
-
 on late-fs
     mount_all --late
 
@@ -81,10 +75,6 @@ on early-boot
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
-    chown system system /sys/class/board_id/version
-    chmod 0666 /sys/class/board_id/version
-    chmod 0666 /dev/aw882xx_smartpa_l
-    chmod 0666 /dev/aw882xx_smartpa_r
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
@@ -92,7 +82,6 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
-    setprop persist.vendor.camera.mmi_ldaf ""
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
@@ -107,6 +96,18 @@ on boot && property:persist.vendor.usb.controller.default=*
 
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
+
+on property:ro.vendor.qti.soc_id=434
+    setprop ro.soc.model SM6350
+
+on property:ro.vendor.qti.soc_id=459
+    setprop ro.soc.model SM6350
+
+on property:ro.vendor.qti.soc_id=400
+    setprop ro.soc.model SM7250
+
+on property:ro.vendor.qti.soc_id=440
+    setprop ro.soc.model SM7250
 
 on charger
     start vendor.power_off_alarm
@@ -134,6 +135,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
+    user root
     group system wakelock
     disabled
 
