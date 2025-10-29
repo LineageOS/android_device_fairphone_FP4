@@ -55,7 +55,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so': blob_fixup()
         .sig_replace('13 0A 00 94', '1F 20 03 D5'),
-    'vendor/lib64/libwvhidl.so': blob_fixup()
+    'vendor/lib/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
 }  # fmt: skip
 
