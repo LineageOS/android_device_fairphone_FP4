@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a083898_9b1bc80e",
+        "filename": "init/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-11-09T10:13:03Z",
+      "side": 1,
+      "message": "ro.soc.model is actually set here. ro.vendor.qti.soc_model is set in init.qti.early_init.sh which actually sets the correct model for our case (SM7225 instead of SM6350)",
+      "revId": "77239c3153d281dd1e949228d7b04801b636efc6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
