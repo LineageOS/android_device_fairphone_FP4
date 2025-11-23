@@ -43,6 +43,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libinput_shim.so'),
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
         .regex_replace('STNFC_HAL_LOGLEVEL=.*', 'STNFC_HAL_LOGLEVEL=0x12'),
     'vendor/lib64/hw/fingerprint.lito.so': blob_fixup()
