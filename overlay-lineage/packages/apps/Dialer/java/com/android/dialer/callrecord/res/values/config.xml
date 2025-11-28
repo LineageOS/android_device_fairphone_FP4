@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-     SPDX-FileCopyrightText: 2021 The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
--->
-<resources>
-    <bool name="call_recording_enabled">true</bool>
-    <integer name="call_recording_audio_source">4</integer>
-</resources>
