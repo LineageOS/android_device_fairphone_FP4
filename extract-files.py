@@ -51,6 +51,8 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname()
         .binary_regex_replace(b'fpsensor_fingerprint\x00', b'fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
         .binary_regex_replace(b'persist.dev.fp_log_level', b'persist.odm.fp_log_level'),
+    'vendor/lib64/libdpps.so': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
     'vendor/lib64/libmorpho_movie_stabilizer6.so': blob_fixup()
         .add_needed('libutils.so'),
     'vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so': blob_fixup()
