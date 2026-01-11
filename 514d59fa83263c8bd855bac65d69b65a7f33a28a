@@ -16,6 +16,24 @@
       "message": "The factory image for this is not up on the website.",
       "revId": "514d59fa83263c8bd855bac65d69b65a7f33a28a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee0f5d41_ff383f61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28232
+      },
+      "writtenOn": "2026-01-11T16:54:33Z",
+      "side": 1,
+      "message": "It\u0027s just SMR. So, nothing to update for the blobs I guess.",
+      "parentUuid": "d0fec387_f8e91bdd",
+      "revId": "514d59fa83263c8bd855bac65d69b65a7f33a28a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
