@@ -164,7 +164,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">17</integer>
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.06667</item>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
         The user is forbidden from setting the brightness below this level. -->
