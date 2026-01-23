@@ -156,15 +156,6 @@
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
 
-    <!-- Minimum allowable screen brightness to use in a very dark room.
-         This value sets the floor for the darkest possible auto-brightness
-         adjustment.  It is expected to be somewhat less than the first entry in
-         config_autoBrightnessLcdBacklightValues so as to allow the user to have
-         some range of adjustment to dim the screen further than usual in very
-         dark rooms. The contents of the screen must still be clearly visible
-         in darkness (although they may not be visible in a bright room). -->
-    <integer name="config_screenBrightnessDark">3</integer>
-
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
