@@ -28,6 +28,6 @@ PRODUCT_MANUFACTURER := Fairphone
 PRODUCT_GMS_CLIENTID_BASE := android-alcatel
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="FP4-user 15 FP4.QREL.15.17.2 15.17.2 release-keys" \
-    BuildFingerprint=Fairphone/FP4eea/FP4:15/FP4.QREL.15.17.2/15.17.2:user/release-keys \
+    BuildDesc="FP4-user 15 FP4.QREL.15.19.1 15.19.1 release-keys" \
+    BuildFingerprint=Fairphone/FP4eea/FP4:15/FP4.QREL.15.19.1/15.19.1:user/release-keys \
     DeviceProduct=FP4eea
