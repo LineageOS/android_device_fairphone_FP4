@@ -87,7 +87,6 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_VERSION := r563880c
 TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/fairphone/FP4.config
-TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/fairphone/sm7225
 
 # Kernel modules - Audio
