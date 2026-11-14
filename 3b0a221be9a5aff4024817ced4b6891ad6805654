@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af97ced3_9ad9f6ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-11-14T03:55:33Z",
+      "side": 1,
+      "message": "I didn\u0027t have any diffs in vendor blobs after running extract-files.py with a factory and the incremental",
+      "revId": "3b0a221be9a5aff4024817ced4b6891ad6805654",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
